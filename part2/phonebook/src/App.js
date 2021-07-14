@@ -23,7 +23,7 @@ const App = () => {
       .then( returnedPeople => {
         setPersons( returnedPeople )
       })
-
+      
   }, [])
 
 

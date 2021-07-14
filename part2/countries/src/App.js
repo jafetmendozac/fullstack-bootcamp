@@ -11,14 +11,17 @@ export const App = () => {
   const [weatherCountry, setWeatherCountry] = useState({})
 
   useEffect(() => {
+
     axios.get('https://restcountries.eu/rest/v2/all')
       .then( (response) => {
         const allCountries = response.data
         setCountries( allCountries )
     })
+
   }, [])
 
   useEffect(() => {
+    
     const url ="http://api.weatherstack.com/current" 
     const api_key = process.env.REACT_APP_API_KEY
 
